@@ -1,0 +1,15 @@
+- name: ping machines, install packages
+  hosts: work
+  become: no
+  vars:
+    packages:
+      - git
+      - htop
+      - mc
+  tasks:
+  - name: ping task
+    ping:
+  - name: install packages
+    apt:
+      pkg: "{{packages}}"
+      state: present
