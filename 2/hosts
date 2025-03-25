@@ -1,0 +1,9 @@
+[group1]
+client01 ansible_host=192.168.23.47 ansible_user=u1 ansible_password=123
+
+[group2]
+client02 ansible_host=192.168.23.98 ansible_user=u2 ansible_password=123
+
+[all_groups:children]
+group1
+group2
